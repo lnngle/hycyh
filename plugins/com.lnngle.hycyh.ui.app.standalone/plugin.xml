@@ -11,14 +11,6 @@
          </run>
       </application>
    </extension>
-    <extension
-         point="org.eclipse.ui.perspectives">
-      <perspective
-            class="com.lnngle.hycyh.ui.app.standalone.Perspective"
-            name="RCP Perspective"
-            id="com.lnngle.hycyh.ui.app.standalone.perspective">
-      </perspective>
-   </extension>
    <extension
          id="product"
          point="org.eclipse.core.runtime.products">
