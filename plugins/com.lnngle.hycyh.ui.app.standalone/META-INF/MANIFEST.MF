@@ -11,8 +11,6 @@ Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.apache.felix.scr,
- org.eclipse.equinox.event,
- org.eclipse.ui.forms,
- org.eclipse.swt
+ org.eclipse.equinox.event
 Bundle-Localization: OSGI-INF/l10n/bundle
 Automatic-Module-Name: com.lnngle.hycyh.ui.app.standalone
