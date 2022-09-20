@@ -28,7 +28,7 @@
                     </formats>
                     <products>
                         <product>
-                            <id>com.lnngle.hycyh.ui.app.standalone.product</id>
+                            <id>com.lnngle.hycyh.product</id>
                             <archiveFileName>hycyh-${hycyh.version}</archiveFileName>
                             <rootFolders>
                                 <!-- for MacOSX, make sure you use a folder ending with .app , see bug 463670 -->

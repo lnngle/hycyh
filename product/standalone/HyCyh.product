@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="HyCyh" uid="com.lnngle.hycyh.product" id="com.lnngle.hycyh.ui.app.standalone.product" application="com.lnngle.hycyh.ui.app.standalone.application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgsMac>-vm ../Eclipse/jre/Contents/Home/bin/java
+      </programArgsMac>
+      <vmArgs>-XX:+IgnoreUnrecognizedVMOptions --add-modules=ALL-SYSTEM -Dosgi.requiredJavaVersion=11 -Xms64m -Xmx1024m
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread
+      </vmArgsMac>
+      <vmArgsWin>-Djavax.net.ssl.trustStoreType=WINDOWS-ROOT -Dorg.eclipse.swt.browser.DefaultType=edge
+      </vmArgsWin>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="com.lnngle.hycyh.ui.app.standalone" />
+   <launcher name="hycyh">
+      <linux icon="/icons/hycyh.xpm"/>
+      <macosx icon="/icons/hycyh.icns"/>
+      <win useIco="true">
+         <ico path="icons/hycyh.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+   </vm>
+
+   <license>
+        <url>https://hycyh.lnngle.com/about/</url>
+        <text>
+   HyCyh - Universal Generator
+            Copyright (C) 2010-2022 DBeaver Corp and others
+
+            Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.lnngle.hycyh.standalone.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <plugin id="org.eclipse.update.configurator" autoStart="false" startLevel="10" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

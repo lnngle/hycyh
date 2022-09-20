@@ -89,6 +89,7 @@
 	<modules>
 		<module>plugins</module>
 		<module>features</module>
+		<module>product/standalone</module>
 	</modules>
 
 </project>
