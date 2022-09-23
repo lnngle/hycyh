@@ -29,6 +29,32 @@
 					<artifactId>tycho-p2-director-plugin</artifactId>
 					<version>${tycho.version}</version>
 				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho.version}</version>
+					<configuration>
+						<!-- Optional set the Java version you are using -->
+						<!-- <executionEnvironment>JavaSE-17</executionEnvironment> -->
+						<environments>
+							<environment>
+								<os>linux</os>
+								<ws>gtk</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>win32</os>
+								<ws>win32</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>macosx</os>
+								<ws>cocoa</ws>
+								<arch>x86_64</arch>
+							</environment>
+						</environments>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 
@@ -58,36 +84,32 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho.version}</version>
-				<configuration>
-					<!-- Optional set the Java version you are using -->
-					<!-- <executionEnvironment>JavaSE-17</executionEnvironment> -->
-					<environments>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
-					</environments>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<modules>
+		<module>bundles</module>
 		<module>plugins</module>
 		<module>features</module>
-		<module>tests</module>
-		<module>product/standalone</module>
 	</modules>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<modules>
+				<!-- Tests -->
+				<module>tests</module>
+
+				<!-- Products -->
+				<module>product/standalone</module>
+			</modules>
+		</profile>
+	</profiles>
 
 </project>
