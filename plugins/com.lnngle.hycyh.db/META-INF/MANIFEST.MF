@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Db
+Bundle-SymbolicName: com.lnngle.hycyh.db;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: LNNGLE
+Require-Bundle: javax.inject;bundle-version="0.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: javax.annotation;version="0.0.0"
+Automatic-Module-Name: com.lnngle.hycyh.db
