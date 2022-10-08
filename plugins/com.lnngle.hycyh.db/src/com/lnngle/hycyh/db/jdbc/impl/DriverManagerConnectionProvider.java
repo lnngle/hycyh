@@ -24,7 +24,6 @@ public class DriverManagerConnectionProvider implements ConnectionProvider {
 	public Connection getConnection() throws SQLException {
 		try {
 			Class.forName(this.driverClassName);
-			DriverManager.registerDriver(null);
 			return DriverManager.getConnection(this.url, this.username, this.password);
 		} catch (ClassNotFoundException e) {
 			throw new SQLException(e);
