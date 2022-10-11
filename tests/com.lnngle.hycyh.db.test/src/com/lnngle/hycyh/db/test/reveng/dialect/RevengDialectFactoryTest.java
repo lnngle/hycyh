@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.junit.Test;
 
+import com.lnngle.hycyh.db.config.DatabaseKeys;
 import com.lnngle.hycyh.db.reveng.dialect.RevengDialect;
 import com.lnngle.hycyh.db.reveng.dialect.RevengDialectFactory;
 
@@ -20,10 +21,10 @@ public class RevengDialectFactoryTest {
 		String password = "nfc2021dev";
 		
 		Properties cfg = new Properties();
-		cfg.setProperty("url", url);
-		cfg.setProperty("driverClassName", driverClassName);
-		cfg.setProperty("username", username);
-		cfg.setProperty("password", password);
+		cfg.setProperty(DatabaseKeys.DATASOURCE_URL, url);
+		cfg.setProperty(DatabaseKeys.DATASOURCE_DRIVERCLASSNAME, driverClassName);
+		cfg.setProperty(DatabaseKeys.DATASOURCE_USERNAME, username);
+		cfg.setProperty(DatabaseKeys.DATASOURCE_PASSWORD, password);
 		RevengDialect revengDialect = RevengDialectFactory.create(cfg);
 		assertNotNull(revengDialect);
 		Iterator<Map<String, Object>> tables = revengDialect.getTables(null, null, "tbl_clf_manufacturer");

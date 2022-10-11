@@ -9,4 +9,6 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: javax.annotation;version="0.0.0"
 Automatic-Module-Name: com.lnngle.hycyh.db
-Export-Package: com.lnngle.hycyh.db.reveng.dialect
+Export-Package: com.lnngle.hycyh.db.config,
+ com.lnngle.hycyh.db.export,
+ com.lnngle.hycyh.db.reveng.dialect
