@@ -4,28 +4,17 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
 
 import org.junit.Test;
 
-import com.lnngle.hycyh.db.config.DatabaseKeys;
 import com.lnngle.hycyh.db.reveng.dialect.RevengDialect;
 import com.lnngle.hycyh.db.reveng.dialect.RevengDialectFactory;
+import com.lnngle.hycyh.db.test.TestData;
 
 public class RevengDialectFactoryTest {
 	@Test
 	public void testCreate() {
-		String url = "jdbc:mariadb://192.168.143.143:3306/db_otms_dev?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true";
-		String driverClassName = "org.mariadb.jdbc.Driver";
-		String username = "du_otms_dev";
-		String password = "nfc2021dev";
-		
-		Properties cfg = new Properties();
-		cfg.setProperty(DatabaseKeys.DATASOURCE_URL, url);
-		cfg.setProperty(DatabaseKeys.DATASOURCE_DRIVERCLASSNAME, driverClassName);
-		cfg.setProperty(DatabaseKeys.DATASOURCE_USERNAME, username);
-		cfg.setProperty(DatabaseKeys.DATASOURCE_PASSWORD, password);
-		RevengDialect revengDialect = RevengDialectFactory.create(cfg);
+		RevengDialect revengDialect = RevengDialectFactory.create(TestData.getDatabaseConfig());
 		assertNotNull(revengDialect);
 		Iterator<Map<String, Object>> tables = revengDialect.getTables(null, null, "tbl_clf_manufacturer");
 		assertNotNull(tables);

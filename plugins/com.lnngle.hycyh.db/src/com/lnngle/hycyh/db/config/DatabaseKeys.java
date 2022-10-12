@@ -20,7 +20,8 @@ public class DatabaseKeys {
 	public static final String TABLE_SCHEM = "TABLE_SCHEM";
 	public static final String TABLE_NAME = "TABLE_NAME";
 	public static final String TABLE_TYPE = "TABLE_TYPE";
-	public static final String TABLE_REMARKS = "TABLE_REMARKS";
+	public static final String TABLE_REMARKS = "REMARKS";
+	public static final String TABLE_COLUMNS = "COLUMNS";
 	
 	public static final String COLUMN_NAME = "COLUMN_NAME";
 	public static final String COLUMN_NULLABLE = "NULLABLE";

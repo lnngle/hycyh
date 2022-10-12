@@ -4,7 +4,7 @@ Bundle-Name: DB Test
 Bundle-SymbolicName: com.lnngle.hycyh.db.test;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: LNNGLE
-Require-Bundle: org.junit;bundle-version="0.0.0",
- com.lnngle.hycyh.db;bundle-version="0.0.0"
+Require-Bundle: org.junit,
+ com.lnngle.hycyh.db
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: com.lnngle.hycyh.db.test
