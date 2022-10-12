@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generator
+Bundle-SymbolicName: com.lnngle.hycyh.generator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: LNNGLE
+Require-Bundle: javax.inject,
+ com.lnngle.hycyh.thirdpart
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: javax.annotation;version="0.0.0"
+Automatic-Module-Name: com.lnngle.hycyh.generator
