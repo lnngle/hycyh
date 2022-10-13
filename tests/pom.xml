@@ -14,6 +14,7 @@
 
     <modules>
         <module>com.lnngle.hycyh.db.test</module>
+		<module>com.lnngle.hycyh.generator.test</module>
 		<module>com.lnngle.hycyh.ui.app.standalone.test</module>
     </modules>
 

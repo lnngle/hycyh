@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generator Test
+Bundle-SymbolicName: com.lnngle.hycyh.generator.test;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: LNNGLE
+Require-Bundle: org.junit,
+ com.lnngle.hycyh.thirdpart,
+ com.lnngle.hycyh.generator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: com.lnngle.hycyh.generator.test

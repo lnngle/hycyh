@@ -9,3 +9,5 @@ Require-Bundle: javax.inject,
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: javax.annotation;version="0.0.0"
 Automatic-Module-Name: com.lnngle.hycyh.generator
+Export-Package: com.lnngle.hycyh.generator.process,
+ com.lnngle.hycyh.generator.process.impl
