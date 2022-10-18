@@ -9,7 +9,7 @@ import com.lnngle.hycyh.generator.config.ProcesserConfig;
 import cn.hutool.core.io.FileUtil;
 import freemarker.template.Template;
 
-public class DefaultProcesser extends AbstractProcesser {
+public class AppProcesser extends AbstractProcesser {
 
 	@Override
 	public void process(ProcesserConfig processerConfig) {

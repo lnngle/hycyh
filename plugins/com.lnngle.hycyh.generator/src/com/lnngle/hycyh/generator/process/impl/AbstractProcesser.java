@@ -10,11 +10,10 @@ public abstract class AbstractProcesser implements Processer  {
 	private Configuration configuration;
 
 	public Configuration getConfiguration() {
-		return configuration;
-	}
-
-	public void setConfiguration(String templatePath) {
-		this.configuration = FreemarkerConfiguration.getConfiguration(templatePath);
+		if (this.configuration == null) {
+			this.configuration = FreemarkerConfiguration.getConfiguration();
+		}
+		return this.configuration;
 	}
 
 }
