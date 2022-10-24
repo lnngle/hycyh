@@ -1,14 +1,13 @@
 package com.lnngle.hycyh.generator.config;
 
 import java.io.File;
-import java.io.Writer;
 import java.util.Map;
 
 public class ProcesserConfig {
 
 	private File templateDir;
 	private Map<String, Object> data;
-	private Writer output;
+	private File outputDir;
 
 	public File getTemplateDir() {
 		return templateDir;
@@ -26,11 +25,12 @@ public class ProcesserConfig {
 		this.data = data;
 	}
 
-	public Writer getOutput() {
-		return output;
+	public File getOutputDir() {
+		return outputDir;
 	}
 
-	public void setOutput(Writer output) {
-		this.output = output;
+	public void setOutputDir(File outputDir) {
+		this.outputDir = outputDir;
 	}
+
 }
