@@ -13,7 +13,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-public abstract class AbstractProcesser implements Processer  {
+public abstract class AbstractProcesser implements Processer {
 
 	private Configuration configuration;
 
@@ -23,13 +23,18 @@ public abstract class AbstractProcesser implements Processer  {
 		}
 		return this.configuration;
 	}
-	
-	protected void generateFile(Template template, Map<String, Object> data, FileWriter out) throws TemplateException, IOException {
+
+	protected void generateFile(Template template, Map<String, Object> data, FileWriter out)
+			throws TemplateException, IOException {
 		template.process(data, out);
 	}
-	
+
 	protected void copyFile(File src, File dest, boolean isOverride) {
-		FileUtil.copy(src, dest, false);
+		FileUtil.copy(src, dest, isOverride);
+	}
+
+	protected void addContent(File file, String sign, String content) {
+
 	}
 
 }

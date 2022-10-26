@@ -20,8 +20,8 @@ public class DefaultProcesser extends AbstractProcesser {
 		try {
 			this.getConfiguration().setDirectoryForTemplateLoading(processerConfig.getTemplateDir());
 			Map<String, Object> data = processerConfig.getData();
-			Map<String, Object> modelData = (Map<String, Object>) data.get(TemplateKeys.DATA_MODEL);
-			Map<String, Object> templateData = (Map<String, Object>) data.get(TemplateKeys.DATA_TEMPLATE);
+			Map<String, Object> modelData = (Map<String, Object>) data.get(TemplateKeys.MODEL_DATA);
+			Map<String, Object> templateData = (Map<String, Object>) data.get(TemplateKeys.TEMPLATE_DATA);
 			File outputDir = processerConfig.getOutputDir();
 			List<File> files = FileUtil.loopFiles(processerConfig.getTemplateDir(), new FtlFileFilter());
 			for (File file : files) {

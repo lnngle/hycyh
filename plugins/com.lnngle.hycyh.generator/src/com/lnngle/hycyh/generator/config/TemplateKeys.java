@@ -5,6 +5,6 @@ public class TemplateKeys {
 	private TemplateKeys() {
 	}
 
-	public static final String DATA_MODEL = "model_data";
-	public static final String DATA_TEMPLATE = "template_data";
+	public static final String MODEL_DATA = "model_data";
+	public static final String TEMPLATE_DATA = "template_data";
 }
