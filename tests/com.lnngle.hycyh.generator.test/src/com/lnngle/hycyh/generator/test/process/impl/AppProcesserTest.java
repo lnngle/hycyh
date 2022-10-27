@@ -29,8 +29,8 @@ public class AppProcesserTest {
 			Map<String, Object> data = new HashMap<>();
 			
 			JSON json = JSONUtil.readJSON(new File(TestConstants.APP_DATA_FILE), Charset.defaultCharset());
-			Map<String, Object>[] modelData = json.toBean(Map[].class);
-			data.put(TemplateKeys.APP_DATA, modelData[0]);
+			Map<String, Object> appData = json.toBean(Map.class);
+			data.put(TemplateKeys.APP_DATA, appData);
 			config.setData(data);
 			
 			File templateDir = new File(TestConstants.APP_TEMPLATE_DIR);

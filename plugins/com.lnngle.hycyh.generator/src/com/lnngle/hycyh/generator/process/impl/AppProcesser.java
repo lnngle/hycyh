@@ -2,6 +2,7 @@ package com.lnngle.hycyh.generator.process.impl;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,9 @@ import com.lnngle.hycyh.generator.config.TemplateKeys;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.StrUtil;
+import freemarker.cache.FileTemplateLoader;
+import freemarker.cache.MultiTemplateLoader;
+import freemarker.cache.TemplateLoader;
 import freemarker.template.Template;
 
 public class AppProcesser extends AbstractProcesser {
@@ -20,7 +24,7 @@ public class AppProcesser extends AbstractProcesser {
 	@Override
 	public void process(ProcesserConfig processerConfig) {
 		try {
-			this.getConfiguration().setDirectoryForTemplateLoading(processerConfig.getTemplateDir());
+			this.loadAppTemplates(processerConfig);
 			Map<String, Object> data = processerConfig.getData();
 			Map<String, Object> appData = (Map<String, Object>) data.get(TemplateKeys.APP_DATA);
 			File outputDir = processerConfig.getOutputDir();
@@ -31,6 +35,7 @@ public class AppProcesser extends AbstractProcesser {
 				String srcName = file.getName();
 				if (srcName.endsWith(FtlFileFilter.FTL_EXT)) {
 					Template template = this.getConfiguration().getTemplate(srcName);
+					FileUtil.mkParentDirs(destPath);
 					File outFile = FileUtil.file(destPath);
 					FileWriter fileWriter = new FileWriter(outFile);
 					this.generateFile(template, appData, fileWriter);
@@ -43,6 +48,18 @@ public class AppProcesser extends AbstractProcesser {
 			e.printStackTrace();
 		}
 
+	}
+	
+	private void loadAppTemplates(ProcesserConfig processerConfig) throws IOException {
+		List<File> files = FileUtil.loopFiles(processerConfig.getTemplateDir(), new FtlFileFilter());
+		TemplateLoader[] loaders = new TemplateLoader[files.size()];
+		for (int i = 0; i < files.size(); i++) {
+			String parent = files.get(i).getParent();
+			FileTemplateLoader ftl = new FileTemplateLoader(new File(parent));
+			loaders[i] = ftl;
+		}
+		MultiTemplateLoader mtl = new MultiTemplateLoader(loaders);
+		this.getConfiguration().setTemplateLoader(mtl);
 	}
 	
 	private String toDestPath(File outputDir, String srcPath, Map<String, Object> appData) {

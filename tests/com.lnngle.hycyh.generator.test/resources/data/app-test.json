@@ -4,5 +4,5 @@
 	"version": "0.0.1",
 	"projectName": "demo",
 	"projectDesc": "Demo for spring boot",
-	"package": "com.lnngle.hycyh.demo",
+	"package": "com.lnngle.hycyh.demo"
 }
