@@ -11,7 +11,7 @@ public class TestConstants {
 	public static final String MODEL_DATA_FILE = "resources/data/table-test.json";
 	public static final String APP_DATA_FILE = "resources/data/app-test.json";
 	
-	public static final String APP_OUTPUT_DIR = "target/app";
+	public static final String APP_OUTPUT_DIR = "target/app/";
 	public static final String MODEL_OUTPUT_DIR = "target/model/";
 
 }
