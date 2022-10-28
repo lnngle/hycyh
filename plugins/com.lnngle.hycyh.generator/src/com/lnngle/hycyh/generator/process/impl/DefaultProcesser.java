@@ -36,7 +36,11 @@ public class DefaultProcesser extends AbstractProcesser {
 			Map<String, Object>[] signData = (Map<String, Object>[]) data.get(TemplateKeys.SIGN_DATA);
 			if (signData != null && signData.length > 0) {
 				for (Map<String, Object> map : signData) {
-					map.get(signData)
+					File file = (File) map.get(TemplateKeys.SignKeys.FILE);
+					String sign = (String) map.get(TemplateKeys.SignKeys.SIGN);
+					String content = (String) map.get(TemplateKeys.SignKeys.CONTENT);
+					
+					this.addContent(file, sign, content);
 				}
 			}
 		} catch (Exception e) {
