@@ -32,6 +32,13 @@ public class DefaultProcesser extends AbstractProcesser {
 				FileWriter fileWriter = new FileWriter(outFile);
 				this.generateFile(template, modelData, fileWriter);
 			}
+			
+			Map<String, Object>[] signData = (Map<String, Object>[]) data.get(TemplateKeys.SIGN_DATA);
+			if (signData != null && signData.length > 0) {
+				for (Map<String, Object> map : signData) {
+					map.get(signData)
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

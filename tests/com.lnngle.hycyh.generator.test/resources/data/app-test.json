@@ -1,6 +1,6 @@
 {
 	"groupId": "com.lnngle.hycyh",
-    "artifactId": "demo",
+	"artifactId": "demo",
 	"version": "0.0.1",
 	"projectName": "demo",
 	"projectDesc": "Demo for spring boot",
