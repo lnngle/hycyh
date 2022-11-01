@@ -23,5 +23,11 @@
          </property>
       </product>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+         <menuContribution allPopups="false" locationURI="menu:file?before=additions">
+            <command commandId="org.eclipse.ui.newWizard" label="zz"/>
+      </menuContribution>
+   </extension>
 
 </plugin>
