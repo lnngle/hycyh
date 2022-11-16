@@ -6,7 +6,7 @@
          point="org.eclipse.ui.newWizards">
          <wizard
                id="com.lnngle.hycyh.ui.core.new.project"
-               class="com.lnngle.hycyh.ui.core.ui.wizard.NewProjectWizard"
+               class="com.lnngle.hycyh.ui.core.ui.wizards.NewProjectWizard"
                name="%wizard.com.lnngle.hycyh.ui.core.wizard.new.project.name">
          </wizard>
    </extension>

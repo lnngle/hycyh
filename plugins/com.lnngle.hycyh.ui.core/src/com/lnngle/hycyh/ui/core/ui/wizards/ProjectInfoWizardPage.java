@@ -1,4 +1,4 @@
-package com.lnngle.hycyh.ui.core.ui.wizard;
+package com.lnngle.hycyh.ui.core.ui.wizards;
 
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 

@@ -29,7 +29,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.e4.ui.services,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.workbench.swt,
- org.eclipse.e4.ui.workbench.renderers.swt,
- com.lnngle.hycyh.model
+ org.eclipse.e4.ui.workbench.renderers.swt
 Bundle-Localization: OSGI-INF/l10n/bundle
 Automatic-Module-Name: com.lnngle.hycyh.ui.core
