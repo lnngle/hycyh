@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+         <wizard
+               id="com.lnngle.hycyh.ui.core.new.project"
+               class="com.lnngle.hycyh.ui.core.ui.wizard.NewProjectWizard"
+               name="%wizard.com.lnngle.hycyh.ui.core.wizard.new.project.name">
+         </wizard>
+   </extension>
+</plugin>

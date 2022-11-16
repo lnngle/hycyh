@@ -25,8 +25,8 @@
    </extension>
    <extension
          point="org.eclipse.ui.menus">
-         <menuContribution allPopups="false" locationURI="menu:file?before=additions">
-            <command commandId="org.eclipse.ui.newWizard" label="zz"/>
+      <menuContribution allPopups="false" locationURI="menu:file?before=additions">
+         <command commandId="org.eclipse.ui.newWizard" label="%menu.file.new.label"/>
       </menuContribution>
    </extension>
 

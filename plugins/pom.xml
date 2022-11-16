@@ -16,6 +16,7 @@
     	<module>com.lnngle.hycyh.model</module>
 		<module>com.lnngle.hycyh.db</module>
 		<module>com.lnngle.hycyh.generator</module>
+		<module>com.lnngle.hycyh.ui.core</module>
 		<module>com.lnngle.hycyh.ui.app.standalone</module>
 	</modules>
 
